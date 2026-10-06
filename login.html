@@ -65,13 +65,16 @@
   </main>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
+document.getElementById("loginForm").addEventListener("submit", function(event) {
 
-      event.preventDefault();
+  event.preventDefault();
 
-      alert("Login page is ready. Next we will connect it to the real account system.");
-    });
-  </script>
+  alert("Login successful!\n\nWelcome back to Dawson Deals.");
+
+  window.location.href = "dashboard.html";
+
+});
+</script>
 
 </body>
 </html>
