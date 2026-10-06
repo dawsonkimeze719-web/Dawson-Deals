@@ -95,23 +95,34 @@
   </main>
 
   <script>
-    document.getElementById("signupForm").addEventListener("submit", function(event) {
+    <script>
+document.getElementById("signupForm").addEventListener("submit", function(event) {
 
-      event.preventDefault();
+  event.preventDefault();
 
-      const password =
-        document.getElementById("password").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+  const accountType = document.getElementById("accountType").value;
 
-      const confirmPassword =
-        document.getElementById("confirmPassword").value;
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
 
-      if (password !== confirmPassword) {
-        alert("Passwords do not match.");
-        return;
-      }
+  if (!accountType) {
+    alert("Please choose Buyer or Seller.");
+    return;
+  }
 
-      alert("Account form is ready. Next we will connect it to the real account system.");
-    });
+  alert(
+    "Account details accepted!\n\n" +
+    "Account type: " +
+    (accountType === "buyer" ? "Buyer" : "Seller") +
+    "\n\nNext we will connect this form to the real account system."
+  );
+
+});
+</script>
   </script>
 
 </body>
