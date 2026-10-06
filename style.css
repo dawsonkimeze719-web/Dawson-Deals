@@ -1,4 +1,18 @@
 /* =========================
+   ACCOUNT STATUS
+========================= */
+
+.account-status {
+  display: inline-block;
+  margin: 8px 0 12px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 800;
+  border: 1px solid #dbeafe;
+}/* =========================
 ADD PRODUCT PAGE
 ========================= */
 
