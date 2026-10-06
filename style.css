@@ -1,4 +1,59 @@
 /* =========================
+   DAWSON DEALS HORIZONTAL SCROLL
+========================= */
+
+/* Categories */
+.category-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 5px 2px 15px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.category-list::-webkit-scrollbar {
+  display: none;
+}
+
+.category {
+  flex: 0 0 140px;
+  min-width: 140px;
+  scroll-snap-align: start;
+}
+
+/* Product cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 5px 4px 18px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+
+/* Mobile */
+@media (max-width: 750px) {
+  .category {
+    flex-basis: 125px;
+    min-width: 125px;
+  }
+
+  .card {
+    flex-basis: 285px;
+  }
+}/* =========================
    SEARCH BAR
 ========================= */
 
