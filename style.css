@@ -1,4 +1,33 @@
 /* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-actions-title {
+  max-width: 1200px;
+  margin: 10px auto 0;
+  padding: 0 6%;
+}
+
+.quick-actions-title .eyebrow {
+  color: var(--orange);
+  margin-bottom: 5px;
+}
+
+.quick-actions-title h2 {
+  margin: 0 0 15px;
+  color: var(--dark);
+  font-size: 28px;
+}
+
+@media(max-width:600px) {
+  .quick-actions-title {
+    padding: 0 5%;
+  }
+
+  .quick-actions-title h2 {
+    font-size: 24px;
+  }
+}/* =========================
    ACCOUNT STATUS
 ========================= */
 
