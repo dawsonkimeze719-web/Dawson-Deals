@@ -3,84 +3,380 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Dawson Deals | Smart Finds, Better Prices</title>
-  <meta name="description" content="Discover useful products, deals and opportunities from Dawson Deals.">
+
+  <meta
+    name="description"
+    content="Discover useful products, deals and opportunities from Dawson Deals."
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header class="hero">
+
     <nav>
-      <div class="logo">DAWSON<span>DEALS</span></div>
-      <a href="#deals" class="nav-btn">Explore</a>
+      <div class="logo">
+        DAWSON<span>DEALS</span>
+      </div>
+
+      <a href="#deals" class="nav-btn">
+        Explore
+      </a>
     </nav>
+
     <div class="hero-content">
-      <p class="eyebrow">SMART FINDS • GREAT VALUE</p>
-      <h1>Find it. Choose it. Save it.</h1>
-      <p>Discover useful products and offers selected for everyday life.</p>
-      <a href="#deals" class="cta">See today's picks</a>
+
+      <p class="eyebrow">
+        SMART FINDS • GREAT VALUE
+      </p>
+
+      <h1>
+        Find it. Choose it. Save it.
+      </h1>
+
+      <p>
+        Discover products, deals and useful finds
+        from different categories in one place.
+      </p>
+
+      <!-- SEARCH -->
+
+      <div class="search-box">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search products, brands or categories..."
+        >
+
+        <button onclick="searchProducts()">
+          🔎 Search
+        </button>
+
+      </div>
+
+      <a href="#deals" class="cta">
+        🛍️ See today's picks
+      </a>
+
     </div>
+
   </header>
 
+
   <main>
-    <section class="section" id="deals">
+
+    <!-- =========================
+         CATEGORIES
+    ========================== -->
+
+    <section class="section categories">
+
       <div class="section-title">
-        <p class="eyebrow">FEATURED</p>
-        <h2>Today's Picks</h2>
-        <p>Product links will be added here when our affiliate partners are connected.</p>
+
+        <p class="eyebrow">
+          SHOP BY CATEGORY
+        </p>
+
+        <h2>
+          Explore Dawson Deals
+        </h2>
+
+        <p>
+          Discover products from different categories.
+        </p>
+
       </div>
+
+
+      <div class="category-list">
+
+        <a href="#deals" class="category">
+          📱
+          <span>Electronics</span>
+        </a>
+
+        <a href="#deals" class="category">
+          👕
+          <span>Fashion</span>
+        </a>
+
+        <a href="#deals" class="category">
+          👟
+          <span>Shoes</span>
+        </a>
+
+        <a href="#deals" class="category">
+          🏠
+          <span>Home</span>
+        </a>
+
+        <a href="#deals" class="category">
+          💄
+          <span>Beauty</span>
+        </a>
+
+        <a href="#deals" class="category">
+          🎒
+          <span>Accessories</span>
+        </a>
+
+        <a href="#deals" class="category">
+          🛒
+          <span>Groceries</span>
+        </a>
+
+        <a href="#deals" class="category">
+          🎁
+          <span>Gifts</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TODAY'S DEALS
+    ========================== -->
+
+    <section class="section" id="deals">
+
+      <div class="section-title">
+
+        <p class="eyebrow">
+          🔥 FEATURED
+        </p>
+
+        <h2>
+          Today's Deals
+        </h2>
+
+        <p>
+          Useful products and interesting finds worth checking out.
+        </p>
+
+      </div>
+
 
       <div class="cards">
-        <article class="card">
-          <div class="placeholder">📱</div>
-          <h3>Phone Accessories</h3>
-          <p>Useful accessories worth checking out.</p>
-          <button onclick="showMessage()">View deal</button>
-        </article>
 
         <article class="card">
-          <div class="placeholder">🎧</div>
-          <h3>Tech & Gadgets</h3>
-          <p>Interesting gadgets and everyday tech.</p>
-          <button onclick="showMessage()">View deal</button>
+
+          <div class="placeholder">
+            📱
+          </div>
+
+          <h3>
+            Phone Accessories
+          </h3>
+
+          <p>
+            Useful accessories for everyday phone users.
+          </p>
+
+          <button onclick="showMessage()">
+            View deal
+          </button>
+
         </article>
 
+
         <article class="card">
-          <div class="placeholder">👕</div>
-          <h3>Fashion Finds</h3>
-          <p>Affordable style and useful finds.</p>
-          <button onclick="showMessage()">View deal</button>
+
+          <div class="placeholder">
+            🎧
+          </div>
+
+          <h3>
+            Tech & Gadgets
+          </h3>
+
+          <p>
+            Interesting gadgets and everyday technology.
+          </p>
+
+          <button onclick="showMessage()">
+            View deal
+          </button>
+
         </article>
+
+
+        <article class="card">
+
+          <div class="placeholder">
+            👕
+          </div>
+
+          <h3>
+            Fashion Finds
+          </h3>
+
+          <p>
+            Affordable fashion and useful style finds.
+          </p>
+
+          <button onclick="showMessage()">
+            View deal
+          </button>
+
+        </article>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================== -->
 
     <section class="how section">
+
       <div class="section-title">
-        <p class="eyebrow">HOW IT WORKS</p>
-        <h2>Our income model</h2>
+
+        <p class="eyebrow">
+          HOW IT WORKS
+        </p>
+
+        <h2>
+          Our income model
+        </h2>
+
       </div>
+
+
       <div class="steps">
-        <div><b>01</b><h3>We select</h3><p>Find products people may genuinely want.</p></div>
-        <div><b>02</b><h3>You discover</h3><p>Visitors browse recommendations and offers.</p></div>
-        <div><b>03</b><h3>We earn</h3><p>When an eligible purchase happens through a partner link, we may receive a commission.</p></div>
+
+        <div>
+          <b>01</b>
+
+          <h3>
+            We select
+          </h3>
+
+          <p>
+            Find products people may genuinely want.
+          </p>
+        </div>
+
+
+        <div>
+          <b>02</b>
+
+          <h3>
+            You discover
+          </h3>
+
+          <p>
+            Visitors browse recommendations and offers.
+          </p>
+        </div>
+
+
+        <div>
+          <b>03</b>
+
+          <h3>
+            We earn
+          </h3>
+
+          <p>
+            When an eligible purchase happens through
+            a partner link, we may receive a commission.
+          </p>
+        </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         COMING NEXT
+    ========================== -->
 
     <section class="section join">
-      <p class="eyebrow">COMING NEXT</p>
-      <h2>Deals, services & digital products</h2>
-      <p>We can later add our own digital products and services so the site has more than one income stream.</p>
+
+      <p class="eyebrow">
+        COMING NEXT
+      </p>
+
+      <h2>
+        Deals, services & digital products
+      </h2>
+
+      <p>
+        We can later add our own digital products and
+        services so Dawson Deals has more than one
+        income stream.
+      </p>
+
     </section>
+
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
-    <strong>DAWSONDEALS</strong>
-    <p>Built step by step with Brother Smith.</p>
+
+    <strong>
+      DAWSONDEALS
+    </strong>
+
+    <p>
+      Built step by step with Brother Smith.
+    </p>
+
   </footer>
 
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
   <script>
+
     function showMessage() {
-      alert("Deal links are not connected yet. Next step: add our real affiliate partner links.");
+
+      alert(
+        "Deal links are not connected yet. Next step: add our real affiliate partner links."
+      );
+
     }
+
+
+    function searchProducts() {
+
+      const input =
+        document.getElementById("searchInput").value.trim();
+
+      if (input === "") {
+
+        alert("Please enter a product or category to search.");
+
+        return;
+      }
+
+      alert(
+        "Search for \"" + input + "\" will be connected to our product system next."
+      );
+
+    }
+
   </script>
+
 </body>
 </html>
