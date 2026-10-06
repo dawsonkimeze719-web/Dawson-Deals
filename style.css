@@ -1,4 +1,165 @@
-/* =========================
+3/* =========================
+SELLER DASHBOARD
+========================= */
+
+.seller-page {
+min-height: 100vh;
+background: #f5f7fb;
+padding-bottom: 60px;
+}
+
+.seller-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 6%;
+background: white;
+border-bottom: 1px solid #e5e7eb;
+}
+
+.seller-welcome {
+max-width: 1100px;
+margin: auto;
+padding: 55px 6% 30px;
+}
+
+.seller-welcome .eyebrow {
+color: var(--orange);
+}
+
+.seller-welcome h1 {
+font-size: clamp(32px, 6vw, 50px);
+margin: 10px 0;
+color: var(--dark);
+}
+
+.seller-welcome p:last-child {
+max-width: 700px;
+color: var(--muted);
+line-height: 1.6;
+font-size: 17px;
+}
+
+.seller-dashboard {
+max-width: 1100px;
+margin: auto;
+padding: 15px 6% 40px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.seller-card {
+background: white;
+padding: 28px;
+border-radius: 22px;
+border: 1px solid #e5e7eb;
+box-shadow: 0 10px 30px rgba(17,24,39,.06);
+}
+
+.seller-card > span {
+display: block;
+font-size: 34px;
+margin-bottom: 18px;
+}
+
+.seller-card h2 {
+margin: 0 0 10px;
+color: var(--dark);
+}
+
+.seller-card p {
+color: var(--muted);
+line-height: 1.5;
+}
+
+.seller-card button {
+margin-top: 10px;
+border: 0;
+padding: 13px 20px;
+border-radius: 12px;
+background: var(--orange);
+color: white;
+font-weight: 800;
+cursor: pointer;
+}
+
+.seller-card button:hover {
+background: #ea580c;
+}
+
+.status-number {
+margin-top: 18px;
+font-size: 30px;
+font-weight: 900;
+color: var(--blue);
+}
+
+.seller-note {
+max-width: 1100px;
+margin: 10px auto 35px;
+padding: 30px 6%;
+}
+
+.seller-note h2 {
+color: var(--dark);
+margin-bottom: 20px;
+}
+
+.seller-steps {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+}
+
+.seller-steps div {
+background: white;
+padding: 20px;
+border-radius: 18px;
+border: 1px solid #e5e7eb;
+}
+
+.seller-steps b {
+color: var(--orange);
+font-size: 20px;
+}
+
+.seller-steps p {
+color: var(--muted);
+line-height: 1.5;
+}
+
+@media(max-width:900px) {
+.seller-dashboard {
+grid-template-columns: 1fr;
+}
+
+.seller-steps {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media(max-width:600px) {
+.seller-header {
+padding: 17px 5%;
+}
+
+.seller-welcome {
+padding: 40px 5% 20px;
+}
+
+.seller-dashboard {
+padding: 10px 5% 30px;
+}
+
+.seller-note {
+padding: 20px 5%;
+}
+
+.seller-steps {
+grid-template-columns: 1fr;
+}
+}/* =========================
 ACCOUNT WELCOME SECTION
 ========================= */
 
