@@ -1,4 +1,129 @@
 /* =========================
+   PROFESSIONAL DASHBOARD
+========================= */
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dashboard-welcome {
+  max-width: 1200px;
+  margin: auto;
+  padding: 55px 6% 30px;
+}
+
+.dashboard-welcome .eyebrow {
+  color: var(--blue);
+}
+
+.dashboard-welcome h1 {
+  font-size: clamp(32px, 6vw, 52px);
+  margin: 10px 0;
+  color: var(--dark);
+}
+
+.dashboard-welcome p:last-child {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.dashboard-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 6% 70px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: white;
+  color: var(--text);
+  text-decoration: none;
+  padding: 25px;
+  min-height: 190px;
+  border-radius: 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, .06);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 38px rgba(37, 99, 235, .13);
+}
+
+.dashboard-card > span {
+  display: block;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.dashboard-card h2 {
+  margin: 0 0 9px;
+  font-size: 20px;
+}
+
+.dashboard-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.dashboard-card.seller-card {
+  border-top: 5px solid var(--orange);
+}
+
+.dashboard-card.seller-card > span {
+  color: var(--orange);
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    padding: 17px 5%;
+  }
+
+  .dashboard-header .nav-btn {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  .dashboard-welcome {
+    padding: 40px 5% 20px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    padding: 10px 5% 50px;
+  }
+
+  .dashboard-card {
+    min-height: auto;
+  }
+}/* =========================
    ACCOUNT PAGES
 ========================= */
 
