@@ -1,4 +1,130 @@
-* {
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-box {
+  display: flex;
+  gap: 8px;
+  max-width: 650px;
+  margin: 25px 0 18px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px 18px;
+  border: 0;
+  border-radius: 14px;
+  outline: none;
+  font-size: 15px;
+}
+
+.search-box button {
+  border: 0;
+  padding: 15px 20px;
+  border-radius: 14px;
+  background: var(--orange);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.category {
+  background: white;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 18px;
+  padding: 22px 15px;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 25px rgba(17, 24, 39, .06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.category span {
+  display: block;
+  margin-top: 9px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, .15);
+}
+
+.category:nth-child(1) {
+  border-top: 4px solid var(--blue);
+}
+
+.category:nth-child(2) {
+  border-top: 4px solid var(--orange);
+}
+
+.category:nth-child(3) {
+  border-top: 4px solid var(--green);
+}
+
+.category:nth-child(4) {
+  border-top: 4px solid var(--purple);
+}
+
+.category:nth-child(5) {
+  border-top: 4px solid var(--orange);
+}
+
+.category:nth-child(6) {
+  border-top: 4px solid var(--blue);
+}
+
+.category:nth-child(7) {
+  border-top: 4px solid var(--green);
+}
+
+.category:nth-child(8) {
+  border-top: 4px solid var(--purple);
+}
+
+/* =========================
+   MOBILE SEARCH + CATEGORIES
+========================= */
+
+@media (max-width: 750px) {
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  .category-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 5px 2px 12px;
+    scroll-behavior: smooth;
+  }
+
+  .category {
+    min-width: 115px;
+    flex-shrink: 0;
+    padding: 18px 12px;
+  }
+}* {
   box-sizing: border-box;
 }
 
