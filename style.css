@@ -1,4 +1,85 @@
 /* =========================
+   SELLER SUBMISSION FORM
+========================= */
+
+.seller-section {
+  background: #eef2ff;
+  border-radius: 28px;
+  margin-bottom: 50px;
+}
+
+.seller-box {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  padding: 28px;
+  border-radius: 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 35px rgba(17, 24, 39, .08);
+}
+
+.seller-box h3 {
+  margin-top: 0;
+  font-size: 25px;
+}
+
+#productForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#productForm input,
+#productForm select,
+#productForm textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  outline: none;
+}
+
+#productForm input:focus,
+#productForm select:focus,
+#productForm textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .12);
+}
+
+#productForm textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+#productForm button {
+  border: 0;
+  padding: 15px;
+  border-radius: 12px;
+  background: var(--blue);
+  color: white;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#productForm button:hover {
+  background: var(--blue-dark);
+}
+
+.review-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 750px) {
+  .seller-box {
+    padding: 20px;
+  }
+}/* =========================
    DAWSON DEALS HORIZONTAL SCROLL
 ========================= */
 
