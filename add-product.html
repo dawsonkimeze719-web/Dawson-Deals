@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Add Product | Dawson Deals</title>  <link rel="stylesheet" href="style.css">
+</head><body>  <main class="add-product-page"><header class="seller-header">
+  <div class="logo">
+    DAWSON<span>DEALS</span>
+  </div>
+
+  <a href="seller.html" class="nav-btn">
+    Seller Area
+  </a>
+</header>
+
+
+<section class="add-product-box">
+
+  <p class="eyebrow">SELLER AREA</p>
+
+  <h1>Add a product</h1>
+
+  <p class="add-product-intro">
+    Enter your product details below. Your product will remain
+    pending until it is reviewed and approved.
+  </p>
+
+
+  <form id="productForm">
+
+    <label for="productName">
+      Product name
+    </label>
+
+    <input
+      type="text"
+      id="productName"
+      placeholder="Enter product name"
+      required
+    >
+
+
+    <label for="productCategory">
+      Category
+    </label>
+
+    <select id="productCategory" required>
+
+      <option value="">
+        Choose a category
+      </option>
+
+      <option>Electronics</option>
+      <option>Fashion</option>
+      <option>Shoes</option>
+      <option>Home</option>
+      <option>Beauty</option>
+      <option>Accessories</option>
+      <option>Groceries</option>
+      <option>Gifts</option>
+
+    </select>
+
+
+    <label for="productPrice">
+      Price (UGX)
+    </label>
+
+    <input
+      type="number"
+      id="productPrice"
+      placeholder="Enter price"
+      min="0"
+      required
+    >
+
+
+    <label for="productDescription">
+      Product description
+    </label>
+
+    <textarea
+      id="productDescription"
+      placeholder="Describe your product..."
+      rows="5"
+      required
+    ></textarea>
+
+
+    <label for="productImage">
+      Product image
+    </label>
+
+    <input
+      type="file"
+      id="productImage"
+      accept="image/*"
+      required
+    >
+
+
+    <button type="submit">
+      Submit for Review
+    </button>
+
+  </form>
+
+
+  <div class="pending-notice">
+    🛡️ <strong>Review process:</strong>
+    Your product will not appear publicly until Dawson Deals
+    approves it.
+  </div>
+
+</section>
+
+
+<a href="seller.html" class="back-home">
+  ← Back to Seller Area
+</a>
+
+  </main>  <script>
+    document.getElementById("productForm").addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      alert("Product submission form is ready. Next we will connect it to the real pending/approval system.");
+
+    });
+  </script></body>
+</html>
