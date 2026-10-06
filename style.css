@@ -1,4 +1,128 @@
-3/* =========================
+/* =========================
+ADD PRODUCT PAGE
+========================= */
+
+.add-product-page {
+min-height: 100vh;
+background: #f5f7fb;
+padding-bottom: 50px;
+}
+
+.add-product-box {
+width: 100%;
+max-width: 700px;
+margin: 45px auto 25px;
+padding: 35px;
+background: white;
+border: 1px solid #e5e7eb;
+border-radius: 24px;
+box-shadow: 0 15px 45px rgba(17,24,39,.08);
+}
+
+.add-product-box .eyebrow {
+color: var(--orange);
+}
+
+.add-product-box h1 {
+margin: 8px 0 10px;
+color: var(--dark);
+font-size: 38px;
+}
+
+.add-product-intro {
+color: var(--muted);
+line-height: 1.6;
+margin-bottom: 28px;
+}
+
+#productForm {
+display: flex;
+flex-direction: column;
+gap: 9px;
+}
+
+#productForm label {
+margin-top: 9px;
+font-size: 14px;
+font-weight: 800;
+color: #374151;
+}
+
+#productForm input,
+#productForm select,
+#productForm textarea {
+width: 100%;
+box-sizing: border-box;
+padding: 14px;
+border: 1px solid #d1d5db;
+border-radius: 12px;
+background: white;
+font-size: 15px;
+outline: none;
+}
+
+#productForm textarea {
+resize: vertical;
+}
+
+#productForm input:focus,
+#productForm select:focus,
+#productForm textarea:focus {
+border-color: var(--blue);
+box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+}
+
+#productForm button {
+margin-top: 18px;
+border: 0;
+padding: 15px;
+border-radius: 12px;
+background: var(--orange);
+color: white;
+font-size: 15px;
+font-weight: 800;
+cursor: pointer;
+}
+
+#productForm button:hover {
+background: #ea580c;
+}
+
+.pending-notice {
+margin-top: 22px;
+padding: 16px;
+border-radius: 14px;
+background: #fff7ed;
+color: #9a3412;
+line-height: 1.5;
+font-size: 14px;
+}
+
+.seller-add-btn {
+display: inline-block;
+margin-top: 15px;
+padding: 13px 20px;
+border-radius: 12px;
+background: var(--orange);
+color: white;
+text-decoration: none;
+font-weight: 800;
+}
+
+.seller-add-btn:hover {
+background: #ea580c;
+}
+
+@media(max-width:600px) {
+.add-product-box {
+margin: 25px 5% 20px;
+padding: 25px 20px;
+}
+
+.add-product-box h1 {
+font-size: 30px;
+}
+}3/* =========================
 SELLER DASHBOARD
 ========================= */
 
