@@ -1,1 +1,306 @@
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f6f7f9;color:#151515}.hero{min-height:72vh;background:linear-gradient(135deg,#111,#292929);color:white;padding:22px 6%;display:flex;flex-direction:column}nav{display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;letter-spacing:1px;font-size:22px}.logo span{font-weight:400}.nav-btn,.cta{color:#111;background:white;text-decoration:none;padding:11px 18px;border-radius:30px;font-weight:700}.hero-content{max-width:720px;margin:auto 0;padding:55px 0}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:800;opacity:.75}.hero h1{font-size:clamp(42px,10vw,78px);line-height:.98;margin:16px 0}.hero p{font-size:18px;line-height:1.6}.section{padding:70px 6%;max-width:1200px;margin:auto}.section-title{text-align:center;max-width:650px;margin:0 auto 35px}.section-title h2,.join h2{font-size:38px;margin:8px 0 12px}.section-title p,.join p{color:#666;line-height:1.6}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border-radius:22px;padding:18px;box-shadow:0 8px 30px #0000000d}.placeholder{height:180px;border-radius:16px;background:#eceff2;display:grid;place-items:center;font-size:58px}.card h3{font-size:21px;margin:18px 0 8px}.card p{color:#666;line-height:1.5}.card button{width:100%;border:0;border-radius:12px;padding:13px;background:#111;color:#fff;font-weight:700}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.steps>div{background:white;border-radius:20px;padding:25px}.steps p{color:#666;line-height:1.5}.join{text-align:center;background:#fff;border-radius:28px;margin-bottom:50px}footer{text-align:center;padding:30px;background:#111;color:white}footer p{color:#aaa;font-size:13px}@media(max-width:750px){.cards,.steps{grid-template-columns:1fr}.hero{min-height:80vh}.section{padding:55px 5%}}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --orange: #f97316;
+  --green: #16a34a;
+  --purple: #7c3aed;
+  --dark: #111827;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --light: #f5f7fb;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--light);
+  color: var(--text);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 72vh;
+  color: white;
+  padding: 22px 6%;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(124, 58, 237, .7), transparent 30%),
+    radial-gradient(circle at 15% 80%, rgba(37, 99, 235, .6), transparent 30%),
+    linear-gradient(135deg, #111827, #1e3a8a);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+
+.logo span {
+  font-weight: 400;
+  color: #60a5fa;
+}
+
+.nav-btn {
+  color: white;
+  background: var(--orange);
+  text-decoration: none;
+  padding: 11px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.hero-content {
+  max-width: 720px;
+  margin: auto 0;
+  padding: 55px 0;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  opacity: .8;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 10vw, 78px);
+  line-height: .98;
+  margin: 16px 0;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 12px;
+  color: white;
+  background: var(--blue);
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-weight: 800;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 70px 6%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.section-title h2,
+.join h2 {
+  font-size: 38px;
+  margin: 8px 0 12px;
+}
+
+.section-title p,
+.join p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =========================
+   PRODUCT CARDS
+========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 10px 35px rgba(17, 24, 39, .08);
+  border: 1px solid #e5e7eb;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, .15);
+}
+
+.placeholder {
+  height: 180px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 58px;
+  background: linear-gradient(135deg, #dbeafe, #ede9fe);
+}
+
+.card h3 {
+  font-size: 21px;
+  margin: 18px 0 8px;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.card button {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 13px;
+  background: var(--blue);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.card button:hover {
+  background: var(--blue-dark);
+}
+
+/* Different category accents */
+
+.card:nth-child(2) .placeholder {
+  background: linear-gradient(135deg, #ffedd5, #fef3c7);
+}
+
+.card:nth-child(3) .placeholder {
+  background: linear-gradient(135deg, #dcfce7, #dbeafe);
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how {
+  background: #eef2ff;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.steps > div {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  border-top: 5px solid var(--blue);
+}
+
+.steps > div:nth-child(2) {
+  border-top-color: var(--orange);
+}
+
+.steps > div:nth-child(3) {
+  border-top-color: var(--green);
+}
+
+.steps b {
+  color: var(--purple);
+  font-size: 24px;
+}
+
+.steps p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* =========================
+   JOIN / FUTURE
+========================= */
+
+.join {
+  text-align: center;
+  background: white;
+  border-radius: 28px;
+  margin-bottom: 50px;
+  border: 1px solid #e5e7eb;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--dark);
+  color: white;
+}
+
+footer strong {
+  color: #60a5fa;
+}
+
+footer p {
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+  .hero {
+    min-height: 80vh;
+    padding: 20px 5%;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-content {
+    padding: 35px 0;
+  }
+
+  .cards,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 55px 5%;
+  }
+
+  .section-title h2,
+  .join h2 {
+    font-size: 32px;
+  }
+
+  .placeholder {
+    height: 200px;
+  }
+}
