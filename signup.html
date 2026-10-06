@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Create Account | Dawson Deals</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="auth-page">
+
+    <div class="auth-box">
+
+      <div class="logo auth-logo">
+        DAWSON<span>DEALS</span>
+      </div>
+
+      <p class="eyebrow">JOIN DAWSON DEALS</p>
+
+      <h1>Create your account</h1>
+
+      <p class="auth-subtitle">
+        Create an account to browse deals and use Dawson Deals.
+      </p>
+
+      <form id="signupForm">
+
+        <label for="fullName">Full name</label>
+        <input
+          type="text"
+          id="fullName"
+          placeholder="Enter your full name"
+          required
+        >
+
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        >
+
+        <label for="phone">Contact number</label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Enter your contact number"
+          required
+        >
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Create a password"
+          required
+        >
+
+        <label for="confirmPassword">Confirm password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm your password"
+          required
+        >
+
+        <button type="submit">
+          Create Account
+        </button>
+
+      </form>
+
+      <p class="auth-footer">
+        Already have an account?
+        <a href="login.html">Log In</a>
+      </p>
+
+      <a href="index.html" class="back-home">
+        ← Back to Dawson Deals
+      </a>
+
+    </div>
+
+  </main>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const password =
+        document.getElementById("password").value;
+
+      const confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      alert("Account form is ready. Next we will connect it to the real account system.");
+    });
+  </script>
+
+</body>
+</html>
