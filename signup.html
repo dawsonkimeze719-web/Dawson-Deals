@@ -95,7 +95,6 @@
   </main>
 
   <script>
-    <script>
 document.getElementById("signupForm").addEventListener("submit", function(event) {
 
   event.preventDefault();
@@ -115,15 +114,16 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
   }
 
   alert(
-    "Account details accepted!\n\n" +
+    "Your account details are ready!\n\n" +
     "Account type: " +
     (accountType === "buyer" ? "Buyer" : "Seller") +
-    "\n\nNext we will connect this form to the real account system."
+    "\n\nPlease log in to continue."
   );
+
+  window.location.href = "login.html";
 
 });
 </script>
-  </script>
 
 </body>
 </html>
