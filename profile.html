@@ -60,6 +60,47 @@
     </section>
 
   </main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+<script>
+const SUPABASE_URL = "https://tsvokbhzwupbomrvutvk.supabase.co";
+const SUPABASE_KEY = "sb_publishable_BgT1WS-1sUZcXZja9eilIg_kaOD7S5e";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+async function loadProfile() {
+  const { data, error } = await supabaseClient.auth.getUser();
+
+  if (error || !data.user) {
+    window.location.href = "login.html";
+    return;
+  }
+
+  const user = data.user;
+  const profile = user.user_metadata;
+
+  document.querySelector(".dashboard-welcome h1").textContent =
+    profile.full_name || "My Dawson Deals Account";
+
+  document.querySelector(".dashboard-welcome p:last-child").textContent =
+    "Account type: " + (profile.account_type || "Buyer");
+
+  const cards = document.querySelectorAll(".dashboard-card");
+
+  cards[0].querySelector("p").textContent =
+    profile.full_name || "Name not available";
+
+  cards[1].querySelector("p").textContent =
+    user.email || "Email not available";
+
+  cards[2].querySelector("p").textContent =
+    profile.phone || "Phone not available";
+}
+
+loadProfile();
+</script>
 </body>
 </html>
