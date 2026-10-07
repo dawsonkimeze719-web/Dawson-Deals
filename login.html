@@ -91,9 +91,13 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     return;
   }
 
-  alert("Login successful! Welcome back to Dawson Deals.");
+  const accountType = data.user?.user_metadata?.account_type;
 
+if (accountType === "seller") {
+  window.location.href = "seller.html";
+} else {
   window.location.href = "dashboard.html";
+}
 });
 </script>
 
