@@ -94,35 +94,17 @@
 
   </main>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <script>
-document.getElementById("signupForm").addEventListener("submit", function(event) {
+const SUPABASE_URL = "https://tsvokbhzwupbomrvutvk.supabase.co";
+const SUPABASE_KEY = "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
 
-  event.preventDefault();
-
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirmPassword").value;
-  const accountType = document.getElementById("accountType").value;
-
-  if (password !== confirmPassword) {
-    alert("Passwords do not match.");
-    return;
-  }
-
-  if (!accountType) {
-    alert("Please choose Buyer or Seller.");
-    return;
-  }
-
-  alert(
-    "Your account details are ready!\n\n" +
-    "Account type: " +
-    (accountType === "buyer" ? "Buyer" : "Seller") +
-    "\n\nPlease log in to continue."
-  );
-
-  window.location.href = "login.html";
-
-});
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+sb_publishable_BgT1WS-1sUZcXZja9eilIg_kaOD7S5e
 </script>
 
 </body>
