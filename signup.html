@@ -104,6 +104,46 @@ const supabaseClient = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
+document.getElementById("signupForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  const fullName = document.getElementById("fullName").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const accountType = document.getElementById("accountType").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
+
+  if (!accountType) {
+    alert("Please choose Buyer or Seller.");
+    return;
+  }
+
+  const { data, error } = await supabaseClient.auth.signUp({
+    email: email,
+    password: password,
+    options: {
+      data: {
+        full_name: fullName,
+        phone: phone,
+        account_type: accountType
+      }
+    }
+  });
+
+  if (error) {
+    alert(error.message);
+    return;
+  }
+
+  alert("Account created successfully! Please log in to continue.");
+  window.location.href = "login.html";
+});
 sb_publishable_BgT1WS-1sUZcXZja9eilIg_kaOD7S5e
 </script>
 
