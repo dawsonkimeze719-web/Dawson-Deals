@@ -64,15 +64,36 @@
 
   </main>
 
-  <script>
-document.getElementById("loginForm").addEventListener("submit", function(event) {
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://tsvokbhzwupbomrvutvk.supabase.co";
+const SUPABASE_KEY = "sb_publishable_BgT1WS-1sUZcXZja9eilIg_kaOD7S5e";
 
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+</script>
+<script>
+document.getElementById("loginForm").addEventListener("submit", async function(event) {
   event.preventDefault();
 
-  alert("Login successful!\n\nWelcome back to Dawson Deals.");
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  const { data, error } = await supabaseClient.auth.signInWithPassword({
+    email: email,
+    password: password
+  });
+
+  if (error) {
+    alert(error.message);
+    return;
+  }
+
+  alert("Login successful! Welcome back to Dawson Deals.");
 
   window.location.href = "dashboard.html";
-
 });
 </script>
 
