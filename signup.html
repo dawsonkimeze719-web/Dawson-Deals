@@ -154,5 +154,39 @@ document.getElementById("signupForm").addEventListener("submit", async function(
 
 </script>
 
+<script>
+const strengthPassword = document.getElementById("password");
+const strengthBar = document.getElementById("strengthBar");
+const strengthText = document.getElementById("strengthText");
+
+if (strengthPassword && strengthBar && strengthText) {
+  strengthPassword.addEventListener("input", function () {
+    const value = strengthPassword.value;
+    let score = 0;
+
+    if (value.length >= 8) score++;
+    if (/[a-z]/.test(value) && /[A-Z]/.test(value)) score++;
+    if (/[0-9]/.test(value)) score++;
+    if (/[^A-Za-z0-9]/.test(value)) score++;
+
+    const levels = [
+      { label: "Not entered", width: "0%", color: "#9ca3af" },
+      { label: "Weak", width: "25%", color: "#ef4444" },
+      { label: "Fair", width: "50%", color: "#f97316" },
+      { label: "Good", width: "75%", color: "#2563eb" },
+      { label: "Strong", width: "100%", color: "#16a34a" }
+    ];
+
+    const level = value.length === 0
+      ? levels[0]
+      : levels[Math.max(1, score)];
+
+    strengthBar.style.width = level.width;
+    strengthBar.style.background = level.color;
+    strengthText.textContent = "Password strength: " + level.label;
+  });
+}
+</script>
+
 </body>
 </html>
