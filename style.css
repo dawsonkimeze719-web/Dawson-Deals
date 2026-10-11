@@ -1385,3 +1385,29 @@ body.premium-auth .auth-logo {
     animation: none;
   }
 }
+
+/* Password strength meter */
+
+.password-strength {
+  margin: -8px 0 16px;
+}
+
+.strength-track {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  width: 0;
+  height: 100%;
+  background: #9ca3af;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+#strengthText {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 12px;
+}
