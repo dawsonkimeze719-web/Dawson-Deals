@@ -1,3 +1,28 @@
+
+/* Password visibility control */
+
+body.premium-auth .password-field {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin: 7px 0 16px;
+}
+
+body.premium-auth .password-field input {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+}
+
+body.premium-auth .password-toggle {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #f3f4f6;
+  color: #1f2937;
+  padding: 0 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
 /* =========================
    QUICK ACTIONS
 ========================= */
