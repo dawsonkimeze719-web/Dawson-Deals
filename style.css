@@ -1232,3 +1232,131 @@ footer p {
   .placeholder {
     height: 200px;
   }
+
+/* =================================
+   DAWSON DEALS PREMIUM AUTH BACKDROP
+================================= */
+
+body.premium-auth {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+  background: #101827;
+}
+
+.auth-slideshow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: #101827;
+}
+
+.auth-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 1.5s ease, transform 6s ease;
+}
+
+.auth-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.auth-slideshow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(9, 18, 38, 0.82),
+      rgba(13, 25, 48, 0.55),
+      rgba(249, 115, 22, 0.24)
+    );
+}
+
+body.premium-auth .auth-page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+  box-sizing: border-box;
+}
+
+body.premium-auth .auth-box {
+  width: 100%;
+  max-width: 440px;
+  box-sizing: border-box;
+  padding: 32px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  animation: authCardEnter 0.8s ease both;
+}
+
+body.premium-auth .auth-box input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 13px 14px;
+  margin: 7px 0 16px;
+}
+
+body.premium-auth .auth-box button[type="submit"] {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+body.premium-auth .auth-box button[type="submit"]:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+body.premium-auth .auth-logo {
+  letter-spacing: 1.5px;
+}
+
+@keyframes authCardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  body.premium-auth .auth-box {
+    padding: 27px 20px;
+    border-radius: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-slide,
+  body.premium-auth .auth-box,
+  body.premium-auth .auth-box button[type="submit"] {
+    transition: none;
+    animation: none;
+  }
+}
