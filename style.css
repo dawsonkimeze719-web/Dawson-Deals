@@ -1,4 +1,126 @@
 
+/* ===== PREMIUM HOMEPAGE WELCOME ===== */
+
+.account-welcome {
+  position: relative;
+  max-width: 1120px;
+  margin: 34px auto;
+  padding: 44px clamp(22px, 5vw, 58px);
+  border-radius: 26px;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    #101a35 0%,
+    #1e3a8a 65%,
+    #2563eb 100%
+  );
+  color: #ffffff;
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.14);
+}
+
+.account-welcome::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  right: -70px;
+  top: -90px;
+  background: rgba(249, 115, 22, 0.25);
+  pointer-events: none;
+}
+
+.account-welcome .welcome-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.account-welcome .eyebrow {
+  color: #fdba74;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.account-welcome h2 {
+  color: #ffffff;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.1;
+  margin: 10px 0 14px;
+}
+
+.account-welcome h2 span {
+  color: #fb923c;
+}
+
+.account-welcome .welcome-description {
+  color: #e5e7eb;
+  max-width: 620px;
+  line-height: 1.7;
+}
+
+.account-welcome .account-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.account-welcome .account-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.account-welcome .login-btn {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.account-welcome .signup-btn {
+  background: #ffffff;
+  color: #172554;
+}
+
+.account-welcome .account-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+
+.account-welcome .welcome-note {
+  margin-top: 22px;
+  color: #dbeafe;
+  font-size: 14px;
+}
+
+.account-welcome .welcome-note span {
+  color: #fdba74;
+  margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+  .account-welcome {
+    margin: 22px 14px;
+    padding: 30px 22px;
+    border-radius: 20px;
+  }
+
+  .account-welcome .account-actions {
+    flex-direction: column;
+  }
+
+  .account-welcome .account-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 /* Password visibility control */
 
 body.premium-auth .password-field {
