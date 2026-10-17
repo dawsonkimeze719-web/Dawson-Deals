@@ -1533,3 +1533,64 @@ body.premium-auth .auth-logo {
   color: #6b7280;
   font-size: 12px;
 }
+
+/* ===== DAWSON DEALS ADVERTISEMENT SPACE ===== */
+
+.ad-section {
+  position: relative;
+  max-width: 1120px;
+  min-height: 180px;
+  box-sizing: border-box;
+  margin: 35px auto;
+  padding: 38px 30px;
+  overflow: hidden;
+  border: 1px dashed #cbd5e1;
+  border-radius: 22px;
+  background: linear-gradient(120deg, #f8fafc, #eff6ff);
+  text-align: center;
+}
+
+.ad-label {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #e2e8f0;
+  color: #475569;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.ad-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.ad-content .eyebrow {
+  color: #ea580c;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+}
+
+.ad-content h2 {
+  margin: 10px 0;
+  color: #172554;
+  font-size: clamp(24px, 4vw, 34px);
+}
+
+.ad-content > p:last-child {
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .ad-section {
+    margin: 24px 14px;
+    padding: 42px 18px 25px;
+    border-radius: 18px;
+  }
+}
